@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock title %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+{% block content %}
+    <div>
+        <img src="{% static '/images/unnamed.png' %}" align='left' alt="Simply Easy Learning" width="140" height="140">
+    	<br><br><h5 style=font-size:55px><font color="black"> &emsp; V E D </font>A N A M</h5><br><br>
+           <h5 align='center' style = "font-family:georgia,garamond,serif;font-style:italic;margin-left: 7.5em;"><br><br>
+           <img src="{% static '/images/saksham.jpg' %}" alt="saksham" width="65" height="65" style="border-radius:10px;border:2px solid #2a2a2a" >
+           <a  href="http://www.linkedin.com/in/sakshambaranwal"><font color= #2a2a2a style="font-weight: bold;">SAKSHAM KUMAR</font></a>&emsp;&emsp;
+           </h5> 
+    <br><br>
+    </div>
+{% endblock %}

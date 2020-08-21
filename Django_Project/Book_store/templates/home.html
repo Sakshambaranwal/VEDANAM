@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
+<div>
+        <img src="{% static '/images/unnamed.png' %}" align='left' alt="Simply Easy Learning" width="140" height="140">
+    	<br><br><h5 style=font-size:55px><font color="black"> &emsp; V E D </font>A N A M</h5><br><br>
+           <h2>WELCOME TO OUR BOOKSTORE!</h2><br><h5>
+            Nowadays, the network plays an import role in people’s life. 
+            In the process of the improvement of the people’s living 
+            standard,people’s demands of the life’s quality and efficiency 
+            is more higher,the traditional bookstore’s inconvenience gradually
+            emerge, and the online bookstore has to be gradually used in public. <br><br> <P>  
+            The online bookstore is a revolution of book industry. The traditional 
+            bookstores’ operation time,address and space is limited, so the types 
+            of books to find receives a degree of restriction. But the 
+            online bookstore breaks the management mode of traditional bookstore.
+            As long as you have a computer, you can read the book anywhere,saving 
+            time and effort, shortening the time of book selection link effectively. 
+            The online bookstore system based on this principle provides convenience
+            and service to people.<br><br></h5> <h4>Enjoy reading online books with us.<br>
+                {% if not user.is_authenticated %}
+            To check the books available here, Please Login
+        {% endif %}</h4>
+
+
+
+
+
+            </P>
+            </div>
+            
+
+    <!-- {% if user.is_authenticated %}
+		{% for book in books %}
+    		<h1>hi</h1>
+    		{{ book.bookName }}
+    		{{ book.bookImage }}
+    		{{ book.authorName }}
+    		{{ book.price }}
+    		{{ book.description }}
+    	{% endfor %}
+    {% endif%} -->
+{% endblock %}

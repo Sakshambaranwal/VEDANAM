@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock title %}
+
+<!--link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"-->
+
+{% block content %}
+    <div>
+        <img src="{% static '/images/unnamed.png' %}" align='left' alt="Simply Easy Learning" width="140" height="140"><br>
+    	<br><br><h1 align='center'><font >ABOUT US</font></h1><br><br>
+           <h5>Our company is a comprehensive online bookstore for both
+                books and other products of every point of knowledge.
+                Our philosophy is based on information, communication and
+                 education, which we feel should be balanced
+                 out with a daily dose of knowledge, wisdom,
+                  understanding (overstanding, and innerstanding).
+            <br><br> <P>Our website features books from every literary genre,
+                 allowing us to appeal to any particular
+                 taste a customer may have. Can't find what you're looking for?
+                  We can order the book for you.
+    In just a few business days, we'll get that book to you so that you can enjoy
+     a quiet evening at home, prepare a nice
+     gift for someone or simply use it to expand your horizons.
+    Our experienced staff can assist you in selecting the right literature
+     and will be glad to go that extra mile for you!</P></h5> 
+    <br><br>
+    <style>
+            a.button{
+                font: bold 11px;
+                text-decoration:white;
+                background-color: rgb(55, 57, 70);
+                color: #f7f7f7;
+                padding: 4px 8px 4px 8px;
+                border-top: 1px solid rgb(39, 39, 39);
+                border-right: 1px solid #333333;
+                border-bottom: 1px solid #333333;
+                border-left: 1px solid rgb(37, 37, 37);
+              }
+        </style>
+    <a  href="{% url 'Book_store:store-contact' %}" class="button">CONTACT US</a>
+        </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cart_tag %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h1 align="center"><font> CART</font></h1>
+<!--table border="1px" align="center" cellpadding="10px" cellspacing="0px">
+        <tr>
+                <td><h6>COVER</h6></td>
+                <td><h6>BOOKNAME</h6></td>
+                <td><h6>QUANTITY</h6></td>
+                <td><h6>PRICE</h6></td>
+        </tr-->
+
+        {% for key,value in request.session.cart.items %}
+        <div  style='box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);'>
+              <img src="{{ value.image}}" width="120" height="166" align='left'>
+              <a  href="{% url 'item_clear' value.product_id %}" >
+                <h6 style="font-weight: bold;  color:red;" align='right'>Delete&emsp;&emsp;</h6></a>
+              <h4 align="left">  {{ value.name }}</h4>
+              <h5>{{value.authorName}}</h5><br>
+              <h5 align="left">  ${{ value.price|multiply:value.quantity}} </h5><br>
+              <h5 style="font-weight: bold;  color:green;" align='left'>
+              <a  href="{% url 'item_decrement' value.product_id %}">
+                -</a>
+               {{value.quantity}} 
+            <a  href="{% url 'item_increment' value.product_id %}">
+                +&emsp;</a> </h5>
+              <!--button>Wishlist</button-->
+          </div><br>
+        <!--tr>
+            <td><img src="{{ value.image}}" alt="Simply Easy Learning" width="80" height="110"></td>
+            <td><a  href="{% url 'Book_store:store-description' value.product_id %}"><font color="black" style="font-weight: bold;">{{value.name}}</font></a></td>
+            <td align="center">
+                <a  href="{% url 'item_decrement' value.product_id %}">
+                    <font size="3" color="green" style="font-weight: bold;">-</font></a>
+                <font size="3" color="green" style="font-weight: bold;">{{value.quantity}}</font>
+                <a  href="{% url 'item_increment' value.product_id %}">
+                    <font size="3" color="green" style="font-weight: bold;">+</font></a>
+                            
+            </td>
+            <td align="center">${{ value.price|multiply:value.quantity}}</td-->
+            <!--td><a href="/edit/{{student.id}}">Edit</a></td>
+            <td><a href="/delete/{{student.id}}" onclick="return check()">Delete</a></td-->
+        <!--/tr-->
+        {% endfor %}<br>
+    <h3 align='right'>Total: $ {{cart_total_amount}}&emsp;&emsp;&emsp;&emsp;&emsp; </h3><br>
+    {% endif %}
+    <!-- {% if user.is_authenticated %}
+		{% for book in books %}
+    		<h1>hi</h1>
+    		{{ book.bookName }}
+    		{{ book.bookImage }}
+    		{{ book.authorName }}
+    		{{ book.price }}
+            {{ book.description }}
+    	{% endfor %}
+    {% endif%} -->
+{% endblock %}
+

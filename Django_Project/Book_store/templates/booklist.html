@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<br><h1 align="center"><font>  OUR BOOKS</font></h1><br>
+<table border="1px" align="center" cellpadding="10px" cellspacing="0px">
+        <tr>
+                <td><h6>COVER</h6></td>
+                <td><h6>BOOKNAME</h6></td>
+                <td><h6>AUTHOR</h6></td>
+                <td><h6>PRICE</h6></td>
+                <td><h6>ADD TO CART</h6></td>
+        </tr>
+        {% for book in books %}
+        <tr>
+            <td><img src="{{ book.image.url }}" alt="Simply Easy Learning" width="80" height="110"></td>
+            <td><a  href="{% url 'Book_store:store-description' book.id %}"><font color="black" style="font-weight: bold;">{{book.name}}</font></a></td>
+            <td>{{book.authorName}}</td>
+            <td align="center">${{book.price}}</td>
+            <td align="center"><a  href="{% url 'cart_add' book.id %}">
+                <font size="3" color="green" style="font-weight: bold;">ADD</font></a></td>
+            <!--td><a href="/edit/{{student.id}}">Edit</a></td>
+            <td><a href="/delete/{{student.id}}" onclick="return check()">Delete</a></td-->
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <!-- {% if user.is_authenticated %}
+		{% for book in books %}
+    		<h1>hi</h1>
+    		{{ book.bookName }}
+    		{{ book.bookImage }}
+    		{{ book.authorName }}
+    		{{ book.price }}
+    		{{ book.description }}
+    	{% endfor %}
+    {% endif%} -->
+{% endblock %}
+

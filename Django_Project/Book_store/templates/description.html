@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock title %}
+
+<!--link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"-->
+
+{% block content %}
+{% if user.is_authenticated %}
+    <div>
+        <img src="{{ book.image.url }}" align='left' alt="Simply Easy Learning" width="180" height="240"><br>
+        <br><br><br><h1 align='center'><font >{{book.name}}</font></h1>
+        <h5 align='right'><font >-{{book.authorName}}</font></h5><br><br><br><br>
+           <h5>{{book.description}}</h5> 
+    <br><br>
+    <h2 align='left'>Price: ${{book.price}}</h2><br>
+    <style>
+            a.button{
+                font: bold 11px;
+                text-decoration:white;
+                background-color: rgb(55, 57, 70);
+                color: #f7f7f7;
+                padding: 4px 8px 4px 8px;
+                border-top: 1px solid rgb(39, 39, 39);
+                border-right: 1px solid #333333;
+                border-bottom: 1px solid #333333;
+                border-left: 1px solid rgb(37, 37, 37);
+              }
+        </style>
+    <a  href="{{book.pdfUrl}}" class="button">READ ONLINE FOR FREE</a>&emsp;&emsp;&emsp;&emsp;
+    <a href="{% url 'cart_add' book.id %}" class="button">ADD TO CART</a>
+        </div>
+{% else %}
+<div class="border-top pt-3">
+    <a href="{% url 'login' %}" class="ml-2" title="">Sign In to continue</a>
+</div>
+{% endif %}
+{% endblock %}
