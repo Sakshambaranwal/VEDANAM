@@ -26,12 +26,12 @@ A model bookstore/shopping website using django framework where users can read o
 ![Alt text](/Screenshots/Screenshot(11).png?raw=true "Cart")
 
   # ADDRESS AND DETAILS
-![Alt text](/Screenshots/Screenshot(12).png?raw=true "Cart")
+![Alt text](/Screenshots/Screenshot(12).png?raw=true "Address and Details")
 
   # PAYTM PAYMENT
-![Alt text](/Screenshots/Screenshot(13).png?raw=true "Cart")
+![Alt text](/Screenshots/Screenshot(13).png?raw=true "Paytm Payment")
 
-![Alt text](/Screenshots/Screenshot(14).png?raw=true "Cart")
+![Alt text](/Screenshots/Screenshot(14).png?raw=true "Confirm payment")
 
   # ABOUT
 ![Alt text](/Screenshots/Screenshot(3).png?raw=true "About")
