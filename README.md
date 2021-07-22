@@ -19,11 +19,19 @@ A model bookstore/shopping website using django framework where users can read o
   # SEARCH RESULT
 ![Alt text](/Screenshots/Screenshot(2).png?raw=true "Search result")
 
-  # CART
-![Alt text](/Screenshots/Screenshot(4).png?raw=true "Cart")
-
   # BOOK DESCRIPTION
 ![Alt text](/Screenshots/Screenshot(10).png?raw=true "Book Detail")
+
+  # CART
+![Alt text](/Screenshots/Screenshot(11).png?raw=true "Cart")
+
+  # ADDRESS AND DETAILS
+![Alt text](/Screenshots/Screenshot(12).png?raw=true "Cart")
+
+  # PAYTM PAYMENT
+![Alt text](/Screenshots/Screenshot(13).png?raw=true "Cart")
+
+![Alt text](/Screenshots/Screenshot(14).png?raw=true "Cart")
 
   # ABOUT
 ![Alt text](/Screenshots/Screenshot(3).png?raw=true "About")
